@@ -1,6 +1,9 @@
-<!DOCTYPE html>
 <html>
-  <body>
-    <h1>404 fallback working</h1>
-  </body>
+  <head>
+    <script>
+      sessionStorage.redirect = location.href;
+      location.replace("/vens-health-hub/");
+    </script>
+  </head>
+  <body></body>
 </html>
