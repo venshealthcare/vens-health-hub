@@ -67,7 +67,7 @@ export function HeroSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
             {/* Floating card */}
-            <div className="absolute -bottom-6 -left-6 rounded-xl bg-card p-4 shadow-card animate-float hidden lg:block">
+            {/* <div className="absolute -bottom-6 -left-6 rounded-xl bg-card p-4 shadow-card animate-float hidden lg:block">
               <div className="flex items-center gap-3">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary">
                   <Shield className="h-6 w-6 text-primary" />
@@ -77,7 +77,7 @@ export function HeroSection() {
                   <p className="text-xs text-muted-foreground">Quality Standards</p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

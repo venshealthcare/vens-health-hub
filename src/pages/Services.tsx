@@ -14,7 +14,7 @@ const services = [
     icon: Settings,
     title: "Diagnostic Reagents & Consumables",
     description: "Premium quality reagents and consumables that ensure accurate diagnostic results and reliable test outcomes for your laboratory.",
-    features: ["ABG reagents", "Randox control cards", "Rapid test cards"],
+    features: ["ABG reagents", "Randox controls", "Rapid test cards"],
   },
   {
     icon: Clock,

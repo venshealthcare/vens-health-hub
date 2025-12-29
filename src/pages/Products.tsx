@@ -53,8 +53,8 @@ const products = [
   },
   {
     id: 5,
-    name: "Randox Control Cards",
-    category: "control-cards",
+    name: "Randox Control",
+    category: "controls",
     icon: BarChart3,
     description: "Quality control solutions designed to maintain laboratory testing standards and ensure accuracy.",
     features: ["Multi-level controls", "Wide analyte range", "Lot-to-lot consistency", "Extended stability"],
