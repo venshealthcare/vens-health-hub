@@ -53,7 +53,7 @@ const products = [
   },
   {
     id: 5,
-    name: "Randox Control Cards",
+    name: "Randox Controls",
     category: "control-cards",
     icon: BarChart3,
     description: "Quality control solutions designed to maintain laboratory testing standards and ensure accuracy.",
