@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Shield, Award, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-medical.jpg";
+import siemensEpoc from "@/assets/siemens-epoc-1.png";
 
 const trustIndicators = [
   { icon: Shield, label: "Quality Assured" },
@@ -58,13 +58,12 @@ export function HeroSection() {
 
           {/* Hero image */}
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-card p-6">
               <img
-                src={heroImage}
-                alt="Advanced medical diagnostic equipment in a modern laboratory setting"
-                className="w-full object-cover aspect-[4/3]"
+                src={siemensEpoc}
+                alt="Siemens ePOC Blood Gas Analyzer - Advanced point-of-care diagnostic equipment"
+                className="w-full object-contain aspect-[4/3]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
             </div>
             {/* Floating card */}
             {/* <div className="absolute -bottom-6 -left-6 rounded-xl bg-card p-4 shadow-card animate-float hidden lg:block">
