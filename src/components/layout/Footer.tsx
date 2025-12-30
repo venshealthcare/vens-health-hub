@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from "lucide-react";
+import vensLogo from "@/assets/vens-logo.png";
 
 const quickLinks = [
   { name: "Home", href: "/" },
@@ -25,25 +26,19 @@ export function Footer() {
           {/* Company info */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-hero">
-                <span className="text-xl font-bold text-primary-foreground">V</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-lg font-bold">VENS Healthcare</span>
-                <span className="text-xs text-primary-foreground/70">Private Limited</span>
-              </div>
+              <img src={vensLogo} alt="VENS Healthcare Logo" className="h-12 w-auto brightness-0 invert" />
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed">
               Trusted distributor of advanced medical equipment and diagnostic consumables for hospitals and laboratories across India.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="rounded-lg p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/srirangam-kadarkarai-91b03938/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="rounded-lg p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="Facebook">
+              <a href="https://www.facebook.com/srirangam.kadarkarai" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="Facebook">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="rounded-lg p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="Instagram">
+              <a href="https://www.instagram.com/srirangamkadarkarai/" target="_blank" rel="noopener noreferrer" className="rounded-lg p-2 bg-primary-foreground/10 hover:bg-primary-foreground/20 transition-colors" aria-label="Instagram">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>

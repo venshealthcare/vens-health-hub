@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Activity, TestTube, Syringe, BarChart3, Microscope } from "lucide-react";
+import { ArrowRight, TestTube, Syringe, BarChart3, Microscope } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import siemensEpoc2 from "@/assets/siemens-epoc-2.png";
 
 const products = [
   {
-    icon: Activity,
+    image: siemensEpoc2,
     name: "Siemens ABG Gas Analyzer – ePOC",
     description: "Advanced point-of-care blood gas analysis with rapid, accurate results for critical care settings.",
     category: "ABG Analyzers",
@@ -57,9 +58,15 @@ export function ProductsPreview() {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-4 flex items-center justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
-                  <product.icon className="h-6 w-6 text-primary" />
-                </div>
+                {product.image ? (
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary overflow-hidden">
+                    <img src={product.image} alt={product.name} className="h-10 w-10 object-contain" />
+                  </div>
+                ) : (
+                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
+                    {product.icon && <product.icon className="h-6 w-6 text-primary" />}
+                  </div>
+                )}
                 <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
                   {product.category}
                 </span>

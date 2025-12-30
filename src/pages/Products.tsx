@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
-import { Activity, TestTube, Syringe, BarChart3, Microscope, Search, ArrowRight } from "lucide-react";
+import { TestTube, Syringe, BarChart3, Microscope, Search, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import siemensEpoc3 from "@/assets/siemens-epoc-3.png";
 
 const categories = [
   { id: "all", name: "All Products" },
@@ -19,7 +20,7 @@ const products = [
     id: 1,
     name: "Siemens ABG Gas Analyzer – ePOC",
     category: "analyzers",
-    icon: Activity,
+    image: siemensEpoc3,
     description: "Advanced point-of-care blood gas analyzer delivering rapid, accurate results for critical care decisions.",
     features: ["Rapid results in minutes", "Compact design", "Easy-to-use interface", "Comprehensive test menu"],
     availability: "In Stock",
@@ -137,9 +138,15 @@ const Products = () => {
                 >
                   <div className="p-6">
                     <div className="flex items-center justify-between mb-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
-                        <product.icon className="h-6 w-6 text-primary" />
-                      </div>
+                      {product.image ? (
+                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary overflow-hidden">
+                          <img src={product.image} alt={product.name} className="h-10 w-10 object-contain" />
+                        </div>
+                      ) : (
+                        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
+                          {product.icon && <product.icon className="h-6 w-6 text-primary" />}
+                        </div>
+                      )}
                       <span className="text-xs font-medium text-accent bg-secondary px-3 py-1 rounded-full">
                         {product.availability}
                       </span>

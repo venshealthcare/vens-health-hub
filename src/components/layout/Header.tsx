@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import vensLogo from "@/assets/vens-logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -41,13 +42,7 @@ export function Header() {
       <nav className="border-b border-border bg-card/95 backdrop-blur-md">
         <div className="container flex h-16 items-center justify-between lg:h-20">
           <Link to="/" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-hero lg:h-12 lg:w-12">
-              <span className="text-xl font-bold text-primary-foreground lg:text-2xl">V</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-lg font-bold text-foreground lg:text-xl">VENS Healthcare</span>
-              <span className="hidden text-xs text-muted-foreground lg:block">Private Limited</span>
-            </div>
+            <img src={vensLogo} alt="VENS Healthcare Logo" className="h-10 w-auto lg:h-12" />
           </Link>
 
           {/* Desktop navigation */}
