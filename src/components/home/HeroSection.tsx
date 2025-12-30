@@ -58,11 +58,11 @@ export function HeroSection() {
 
           {/* Hero image */}
           <div className="relative animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-card p-6">
+            <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-card">
               <img
                 src={siemensEpoc}
                 alt="Siemens ePOC Blood Gas Analyzer - Advanced point-of-care diagnostic equipment"
-                className="w-full object-contain aspect-[4/3]"
+                className="w-full"
               />
             </div>
             {/* Floating card */}
